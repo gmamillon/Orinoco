@@ -13,7 +13,7 @@ var artList = () => {
 }
 
 const basketShow = async function () {
-    const artArray = artList();
+    var artArray = artList();
     const basketTotal = document.createElement('li');
     var total = 0;
     if (artArray.length != 0) {
@@ -54,11 +54,11 @@ const basketShow = async function () {
                 const articleId = localStorage.getItem(artArray[i]);
                 img.src = data.imageUrl;
                 prodName.innerText = data.name;
-                var price = Number(localStorage.getItem('quantity' + articleId)) * Number(data.price);
-                prodPrice.innerText = price.toString() + " ¥";
                 lense.innerText = "lentille : " + localStorage.getItem('lense' + articleId);
                 prodQuant.innerText = "Quantité : " + localStorage.getItem('quantity' + articleId);
                 btnSuppr.innerText = "Supprimer";
+                var price = Number(localStorage.getItem('quantity' + articleId)) * Number(data.price);
+                prodPrice.innerText = price.toString() + " ¥";
                 total = total + price;
 
                 // Remove the product from the basket list and the localStorage, and adjust the total price of the order.
@@ -103,6 +103,8 @@ const basketShow = async function () {
         
         // Build the products array.
         var products = [];
+        artArray = artList();
+
         for (var i = 0; artArray.length > i; i++) {
             products.push(localStorage.getItem(artArray[i]));
         }
