@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Orinoco</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html"><img src="img/logo.png" alt="logo orinoco site de e-commerce" class="header__logo"></a>
+            <a href="panier.html" class="header__link">Mon panier</a>
+        </header>
+        <h1 class="titre">Votre panier</h1>
+        <section class="panier">
+            <ul class="panier__liste" id="panier">
+                <li class="panier__produit">
+                    <img src="backend/images/teddy_1.jpg" alt="" class="panier__img">
+                    <div class="panier__info">
+                        <p class="panier__info__elmnt">Ours</p>
+                        <p class="panier__info__elmnt">50$</p>
+                        <p class="panier_info__elmnt">Quantité : 2</p>
+                        <button type="submit" class="panier__btn">Supprimer</button>
+                    </div>
+                </li>
+            </ul>
+            <form id="validation" class="form">
+                <label for="nom" class="form__label">Nom</label>
+                <input type="text" class="form__input" required>
+                <label for="prénom" class="form__label">Prénom</label>
+                <input type="text" class="form__input"required>
+                <label for="addresse" class="form__label">Addresse</label>
+                <input type="text" class="form__input" required>
+                <label for="ville" class="form__label">Ville</label>
+                <input type="text" class="form__input" required>
+                <label for="email" class="form__label">E-mail</label>
+                <input type="email" class="form__input" required>
+                <button type="submit" class="form__btn">Valider</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <ul class="footer__liste">
+                <li class="footer__link"><a href="panier.html">Mon panier</a></li>
+                <li class="footer__link"><a href="#">À propos</a></li>
+                <li class="footer__link"><a href="#">Service client</a></li>
+                <li class="footer__link"><a href="#">Conditions générales</a></li>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

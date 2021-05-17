@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    list-style-type: none;
+}
+@font-face {
+    font-family: "roboto";
+    src: url("assets/font/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "roboto";
+    src: url("assets/font/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+$color1: #f3e9f1;
+$color2: #e68a09;
+$color3: #8f5bfe;
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: "roboto";
+}
+a {
+    all: unset;
+    cursor: pointer;
+}
+.header {
+    height: auto;
+    background-color: $color1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    &__logo {
+        height: 80px;
+    }
+    &__nav {
+        padding: 10px;
+    }
+    &__link, &__link:visited {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        transition: color 0.2s linear;
+        margin-right: 20px;
+        &:hover {
+            color: $color2;
+        }
+    }
+}
+.footer {
+    padding: 50px 0;
+    background-color: $color1;
+    &__liste {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+    }
+    &__link {
+        margin-top: 6px;
+        padding: 5px;
+        font-size: 18px;
+        a, a:visited {
+            color: black;
+            transition: color 0.2s linear;
+            &:hover {
+                color: $color2;
+            }
+        }
+    }
+}
+.titre {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        text-align: center;
+        line-height: 40px;
+        font-size: 35px;
+    }
+}
+.productsContainer {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.product {
+    margin: 10px;
+    padding: 10px;
+    background-color: $color1;
+    box-shadow: 6px 6px 12px #666;
+    &:hover &__info {
+        color: $color3;
+    }
+    &__illustration {
+        height: 300px;
+        margin: 10px 10px;
+        overflow: hidden;
+        &:hover img {
+            transform: scale(1.06);
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s linear;
+        }
+    }
+    &__info, &__info:visited {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        padding: 3px;
+    }
+}
+.produit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__presentation {
+        background-color: $color1;
+        margin: 10px;
+        border: 10px solid $color1;
+        box-shadow: 6px 6px 12px #666;
+        max-width: 500px;
+    }
+    &__img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__nom {
+        margin-top: 12px;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    &__prix {
+        font-size: 24px;
+        font-weight: bold;
+        height: 40px;
+        margin-top: 12px;
+    }
+    &__description {
+        font-weight: bold;
+        span {
+            display: block;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+    }
+    &__form {
+        width: 250px;
+        background-color: $color1;
+        border: 10px solid $color1;
+        box-shadow: 6px 6px 12px #666;
+        margin: 50px;
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__label {
+        font-size: 18px;
+        font-weight: bold;
+        height: 30px;
+        margin-top: 15px;
+    }
+    &__btn {
+        border: none;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: $color3;
+        font-weight: bold;
+        font-size: 18px;
+        color: $color1;
+        cursor: pointer;
+        &:hover, &:focus {
+            background-color: $color2;
+        }
+    }
+}
+.panier {
+    display: flex;
+    margin-bottom: 20px;
+    &__liste {
+        padding: 0;
+        width: 50%;
+        min-width: fit-content;
+    }
+    &__produit {
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: $color1;
+        padding: 10px;
+        margin-top: 20px;
+        box-shadow: 6px 6px 12px #666;
+    }
+    &__img {
+        height: 180px;
+        width: 180px;
+        object-fit: cover;
+    }
+    &__info {
+        &__elmnt{
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    &__action {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    &__label {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &__btn {
+        border: none;
+        padding: 15px;
+        margin-top: 10px;
+        background-color: $color3;
+        font-weight: bold;
+        font-size: 18px;
+        color: $color1;
+        cursor: pointer;
+        &:hover, &:focus {
+            background-color: $color2;
+        }
+    }
+}
+.form {
+    width: 250px;
+    background-color: $color1;
+    border: 10px solid $color1;
+    box-shadow: 6px 6px 12px #666;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto auto auto;
+    font-weight: bold;
+    &__btn {
+        border: none;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: $color3;
+        font-weight: bold;
+        font-size: 18px;
+        color: $color1;
+        cursor: pointer;
+        &:hover, &:focus {
+            background-color: $color2;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .productsContainer {
+        grid-template-columns: 100%;
+    }
+    .categorie {
+        &__illustration {
+            height: 400px;
+        }
+    }
+    .produit {
+        flex-direction: column;
+    }
+    .panier {
+        flex-direction: column;
+        &__liste {
+            width: 100%;
+        }
+
+    }
+    .form {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        justify-content: space-around;
+    }
+    .footer {
+        &__liste {
+        flex-direction: column;
+        }
+    }
+    .categorie {
+        &__illustration {
+            height: 300px;
+        }
+    }
+    .produit {
+        &__img {
+            height: 320px;
+        }
+    }
+}

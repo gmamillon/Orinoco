@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Orinoco</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html"><img src="img/logo.png" alt="logo orinoco site de e-commerce" class="header__logo"></a>
+            <nav class="header__nav">
+                <a href="panier.html" class="header__link">Mon panier</a>
+                <a href="index.html" class="header__link">Acceuil</a>
+            </nav>
+        </header>
+        <section class="produit">
+            <div class="produit__presentation" id="presProduit">
+                
+            </div>
+            <div class="produit__form">
+                <form action="" method="post">
+                    <label for="custom" class="produit__label">lentille</label>
+                    <select name="prod" id="custom" class="produit__select">
+                    </select>
+                    <label for="quantite" class="produit__label">Quantité</label>
+                    <input type="text" maxlength="3" id="quantity" value="1">
+                    <button type="submit" class="produit__btn" id="btn">Ajouter au panier</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <ul class="footer__liste">
+                <li class="footer__link"><a href="panier.html">Mon panier</a></li>
+                <li class="footer__link"><a href="#">À propos</a></li>
+                <li class="footer__link"><a href="#">Service client</a></li>
+                <li class="footer__link"><a href="#">Conditions générales</a></li>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="js/produit.js"></script>
+    </body>
+</html>
